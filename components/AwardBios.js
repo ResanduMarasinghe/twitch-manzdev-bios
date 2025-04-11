@@ -114,7 +114,7 @@ class AwardBios extends HTMLElement {
   showExit() {
     this.shadowRoot.querySelector(".screen").innerHTML += `
     <div class="message">
-      <div class="container">SAVE to CMOS and EXIT (Y/N)?</div>
+      <div class="container">You're about to hack time. Proceed? (Y/N)?</div>
     </div>`;
     setTimeout(() => this.exitBIOS(), 2000);
   }
@@ -122,13 +122,13 @@ class AwardBios extends HTMLElement {
   exitBIOS() {
     const screen = this.shadowRoot.querySelector(".screen");
     screen.classList.remove("blue");
-    screen.innerHTML = `<p>C:\\&gt;<span class="typewriter" data-duration="2000" data-delay="0">TWITCH.EXE MANZDEV</span><span class="cursor"></span>`;
+    screen.innerHTML = `<p>C:\\&gt;<span class="typewriter" data-duration="2000" data-delay="0">AXIS.2025</span><span class="cursor"></span>`;
     typewriter(screen.querySelector(".typewriter"));
     setTimeout(() => {
       screen.innerHTML = `
         <p>
-          C:\\&gt;TWITCH.EXE MANZDEV<br><br>
-          Start booting <strong>Twitch.tv/ManzDev</strong>...<span class="cursor"></span>
+          C:\\&gt;AXIS.2025<br><br>
+          Start booting <strong>Await</strong>...<span class="cursor"></span>
         </p>
       `;
     }, 3000);
@@ -138,7 +138,7 @@ class AwardBios extends HTMLElement {
     this.shadowRoot.innerHTML = `
     <style>${AwardBios.styles}</style>
     <div class="blue screen">
-      <div class="title center">CMOS Setup Utility - Copyright (C) 1984-2001 Award Software</div>
+      <div class="title center">CMOS Setup Utility - Copyright (C) 1982-2025 RCCS Software</div>
       <div class="setup">
         <div class="main-options">
           <div class="options options-1">

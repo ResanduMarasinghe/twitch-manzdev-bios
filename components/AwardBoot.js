@@ -41,8 +41,8 @@ class AwardBoot extends HTMLElement {
       }
       .epa {
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 400;
+        top: 100;
         opacity: 1;
         transition: opacity 1s linear;
       }
@@ -130,27 +130,27 @@ class AwardBoot extends HTMLElement {
     const disk = DISKS[~~(Math.random() * DISKS.length)];
     const size = SIZES[~~(Math.random() * SIZES.length)];
 
-    await this.setHTML(".hdd p:nth-child(1)", `Detecting IDE Primary Master  ... <span>[Press <strong>F4</strong> to skip]</span>`);
-    await this.setHTML(".hdd p:nth-child(1)", `Detecting IDE Primary Master  ... <span>${disk} ${size}</span>`, 2000);
+    await this.setHTML(".hdd p:nth-child(1)", `Detecting IDE TesserX  ... <span>[Press <strong>F4</strong> to skip]</span>`);
+    await this.setHTML(".hdd p:nth-child(1)", `Detecting IDE TesserX  ... <span>${disk} ${size}</span>`, 2000);
 
-    await this.detectDevice(2, "Primary Slave");
-    await this.detectDevice(3, "Secondary Master");
-    await this.detectDevice(4, "Secondary Slave");
+    await this.detectDevice(2, "DiscoverY");
+    await this.detectDevice(3, "HackBlitZ");
+    await this.detectDevice(4, "AXIS '25");
   }
 
   turnOn() {
     return this.setHTML(".header", `
-      <img class="epa" src="./assets/epa.png" alt="Energy EPA">
+      <img height="50px" class="epa" src="./assets/RCCS_Logo_White.png" alt="RCCS Logo">
       <div class="brand-text">
         <img class="ribbon" src="./assets/award-logo.png" alt="Award Logo">
           <p>
-            Award Modular BIOS v4.50G, An Energy Star Ally<br>
-              Copyright (C) 1984-94, Award Software, Inc.
+            AXIS Modular BIOS v4.50G, RCCS<br>
+              Copyright (C) 1982-2025, rccsonline.com
           </p>
         </div>
-          <p>M4NZD3V ACPI BIOS Revision 1004</p>
+          <p>AXIS ACPI BIOS Revision 0003</p>
           <p>
-            Intel(R) Pentium(R) PRO-MMX CPU at 133Mhz<br>
+            RCCS(R) Projects(R) AXIS; CPU at 133Mhz<br>
             Memory Test:  <span class="memory">${2 ** 16}</span>
           </p>
       `, 2000);
@@ -218,7 +218,7 @@ class AwardBoot extends HTMLElement {
       <div class="header">
       </div>
       <p class="pnp-stage off">
-        Award Plug and Play BIOS Extension v1.0A<br>
+        AXIS Plug and Play BIOS Extension v3.0A<br>
         Initialize Plug and Play Cards...<br>
         PNP Init Completed
       </p>
